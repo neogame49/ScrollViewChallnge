@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6ZH-CO-Mrm">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScrollViewChalenge" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,138 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPA-cn-2tu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdd-rn-IQw">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZeW-Ty-luM">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="480"/>
+                                                <subviews>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y2A-5v-iAd">
+                                                        <rect key="frame" x="10" y="10" width="580" height="150"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="150" id="k7R-Nx-U7j"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <segue destination="sAm-jG-REZ" kind="embed" id="9UN-2D-jLr"/>
+                                                        </connections>
+                                                    </containerView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XhH-O9-emr">
+                                                        <rect key="frame" x="10" y="170" width="580" height="150"/>
+                                                        <color key="backgroundColor" red="1" green="0.41838246420000003" blue="0.38664064790000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="150" id="PI9-vF-Ddr"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1GC-1Y-ZfL">
+                                                        <rect key="frame" x="10" y="330" width="580" height="150"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="150" id="bIV-8R-yJa"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <segue destination="1J1-Y0-4Yv" kind="embed" id="jNP-Fs-ICu"/>
+                                                        </connections>
+                                                    </containerView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="1GC-1Y-ZfL" secondAttribute="trailing" constant="10" id="7nn-mg-jcu"/>
+                                                    <constraint firstAttribute="bottom" secondItem="1GC-1Y-ZfL" secondAttribute="bottom" id="AVB-7A-MOD"/>
+                                                    <constraint firstItem="1GC-1Y-ZfL" firstAttribute="top" secondItem="XhH-O9-emr" secondAttribute="bottom" constant="10" id="E1H-Og-AjK"/>
+                                                    <constraint firstItem="1GC-1Y-ZfL" firstAttribute="leading" secondItem="ZeW-Ty-luM" secondAttribute="leading" constant="10" id="HFM-K0-YuE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Y2A-5v-iAd" secondAttribute="trailing" constant="10" id="Hxk-vO-VaL"/>
+                                                    <constraint firstItem="XhH-O9-emr" firstAttribute="leading" secondItem="ZeW-Ty-luM" secondAttribute="leading" constant="10" id="LO3-Vt-RnB"/>
+                                                    <constraint firstItem="Y2A-5v-iAd" firstAttribute="top" secondItem="ZeW-Ty-luM" secondAttribute="top" constant="10" id="Pnv-H4-yah"/>
+                                                    <constraint firstItem="Y2A-5v-iAd" firstAttribute="leading" secondItem="ZeW-Ty-luM" secondAttribute="leading" constant="10" id="bWi-Mk-w4x"/>
+                                                    <constraint firstAttribute="trailing" secondItem="XhH-O9-emr" secondAttribute="trailing" constant="10" id="uto-FH-MKL"/>
+                                                    <constraint firstItem="XhH-O9-emr" firstAttribute="top" secondItem="Y2A-5v-iAd" secondAttribute="bottom" constant="10" id="xhY-bJ-5d4"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ZeW-Ty-luM" firstAttribute="top" secondItem="rdd-rn-IQw" secondAttribute="top" id="7Au-hR-nmq"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZeW-Ty-luM" secondAttribute="bottom" id="KsF-aT-1qN"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZeW-Ty-luM" secondAttribute="trailing" id="PWu-uD-7to"/>
+                                            <constraint firstItem="ZeW-Ty-luM" firstAttribute="leading" secondItem="rdd-rn-IQw" secondAttribute="leading" id="rgo-5M-VuO"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="rdd-rn-IQw" secondAttribute="bottom" id="Bh7-6c-0fP"/>
+                                    <constraint firstItem="rdd-rn-IQw" firstAttribute="top" secondItem="PPA-cn-2tu" secondAttribute="top" id="NrL-0Y-6bc"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZeW-Ty-luM" secondAttribute="trailing" id="QBA-fK-HjK"/>
+                                    <constraint firstAttribute="trailing" secondItem="rdd-rn-IQw" secondAttribute="trailing" id="Ua1-Mj-NdL"/>
+                                    <constraint firstItem="rdd-rn-IQw" firstAttribute="leading" secondItem="PPA-cn-2tu" secondAttribute="leading" id="r2g-oe-fLN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PPA-cn-2tu" secondAttribute="trailing" id="27Q-Xz-nek"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PPA-cn-2tu" secondAttribute="bottom" id="7az-7B-E6g"/>
+                            <constraint firstItem="PPA-cn-2tu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="B02-9u-k1q"/>
+                            <constraint firstItem="PPA-cn-2tu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="CH4-8e-9fU"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="dn7-mT-5A5">
+                        <rightBarButtonItems>
+                            <barButtonItem title="&gt;" id="9bh-6q-hUf">
+                                <connections>
+                                    <action selector="forwardAction:" destination="BYZ-38-t0r" id="uYQ-05-JYI"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="&lt;" id="Fvm-Tf-7YW">
+                                <connections>
+                                    <action selector="backAction:" destination="BYZ-38-t0r" id="wkq-cM-6ZS"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="secondPageHeightConstraint" destination="bIV-8R-yJa" id="QdD-VA-Kgw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1117" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Zh-HI-s3v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6ZH-CO-Mrm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="boK-sg-2oB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="T2B-hg-3qf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggX-PR-oNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="383" y="1089"/>
+        </scene>
+        <!--Second Page View Controller-->
+        <scene sceneID="b7l-VW-EUA">
+            <objects>
+                <pageViewController restorationIdentifier="SecondPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="1J1-Y0-4Yv" customClass="SecondPageViewController" customModule="ScrollViewChalenge" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8h2-rg-qSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1422" y="1077"/>
+        </scene>
+        <!--First Page View Controller-->
+        <scene sceneID="cbZ-kK-ycM">
+            <objects>
+                <pageViewController restorationIdentifier="FirstPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="sAm-jG-REZ" customClass="FirstPageViewController" customModule="ScrollViewChalenge" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BIb-D7-2JQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="499" y="157"/>
         </scene>
     </scenes>
 </document>
